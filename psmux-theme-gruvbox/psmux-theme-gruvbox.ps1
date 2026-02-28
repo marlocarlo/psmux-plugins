@@ -85,7 +85,7 @@ $paneCount = if ($showPanes -eq 'on') { "#{?#{e|>:#{window_panes}#,1},#[fg=$($p.
 
 $left = "#[bg=$($p.yellow),fg=$($p.bg0),bold] ${iSess}#S #[fg=$($p.yellow),bg=$($p.bg1)]${sLR}"
 if ($showUser -eq 'on') {
-    $left += "#[fg=$($p.fg2),bg=$($p.bg1)] ${iUser}#(whoami) #[fg=$($p.bg1),bg=$($p.bg0)]${sLR} "
+    $left += "#[fg=$($p.fg2),bg=$($p.bg1)] ${iUser}#{user} #[fg=$($p.bg1),bg=$($p.bg0)]${sLR} "
 } else { $left += "#[fg=$($p.bg1),bg=$($p.bg0)]${sLR} " }
 & $PSMUX set -g status-left $left 2>&1 | Out-Null
 & $PSMUX set -g status-left-length 45 2>&1 | Out-Null

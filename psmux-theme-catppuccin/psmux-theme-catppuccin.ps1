@@ -135,7 +135,7 @@ if ($showPanes -eq 'on') {
 # Status left: session icon + name + optional user/host
 $stLeft = "#[bg=$($p.blue),fg=$($p.crust),bold]  #S #[fg=$($p.blue),bg=$($p.surface0)]${lSep}"
 if ($showUser -eq 'on') {
-    $stLeft += "#[fg=$($p.subtext0),bg=$($p.surface0)]  #(whoami) "
+    $stLeft += "#[fg=$($p.subtext0),bg=$($p.surface0)]  #{user} "
 }
 if ($showHost -eq 'on') {
     $stLeft += "#[fg=$($p.surface1),bg=$($p.surface0)]#[fg=$($p.sky),bg=$($p.surface1)] 󰒋 #H "

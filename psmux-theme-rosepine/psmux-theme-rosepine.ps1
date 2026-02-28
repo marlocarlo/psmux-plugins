@@ -82,7 +82,7 @@ $paneCount = if ($showPanes -eq 'on') { "#{?#{e|>:#{window_panes}#,1},#[fg=$($p.
 # Status-left: session with iris accent
 $left = "#[bg=$($p.iris),fg=$($p.base),bold] ${iSess}#S #[fg=$($p.iris),bg=$($p.surface)]${sLR}"
 if ($showUser -eq 'on') {
-    $left += "#[fg=$($p.subtle),bg=$($p.surface)] ${iUser}#(whoami) #[fg=$($p.surface),bg=$($p.base)]${sLR} "
+    $left += "#[fg=$($p.subtle),bg=$($p.surface)] ${iUser}#{user} #[fg=$($p.surface),bg=$($p.base)]${sLR} "
 } else { $left += "#[fg=$($p.surface),bg=$($p.base)]${sLR} " }
 & $PSMUX set -g status-left $left 2>&1 | Out-Null
 & $PSMUX set -g status-left-length 45 2>&1 | Out-Null
